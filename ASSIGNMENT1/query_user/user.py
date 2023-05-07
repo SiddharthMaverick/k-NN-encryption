@@ -14,6 +14,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as data_owner:
     query = {"query": n}
     data_owner.sendall(json.dumps(query).encode())
     data = data_owner.recv(1024).decode()
+    data =int(data)
     print(f"Data received from data owner: {data}")
 
 # Send data to cloud server
