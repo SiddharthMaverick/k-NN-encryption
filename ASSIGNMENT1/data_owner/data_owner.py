@@ -20,5 +20,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 print(f"Query received from query user: {query['query']}")
                 rand_num = random.randint(1, 10000)
                 product = query['query'] * rand_num
-                response = {"data": product}
-                conn.sendall(json.dumps(response).encode())
+                conn.sendall(str(product).encode())
