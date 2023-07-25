@@ -49,7 +49,7 @@ Sequence should be 2->1->3
      ```
    - Run the cloud server container with bind mount and volume mount:
      ```
-     docker run -p 5001:5001 -v /tmp/data:/app/data -v factors-db:/app/factors-db cloud-server
+     docker run -p 5071:5071 -v /tmp/data:/app/data -v factors-db:/app/factors-db cloud-server
      ```
 
 3. **Query User Setup:**
@@ -70,5 +70,5 @@ To build and run the cloud server container, use the following command:
 
 ```bash
 docker build -t cloud-server ./cloud_server
-docker run -p 5001:5001 -v /tmp/data:/app/data -v factors-db:/app/factors-db cloud-server
+docker run -p 5071:5071 -v /tmp/data:/app/data -v factors-db:/app/factors-db cloud-server
 
