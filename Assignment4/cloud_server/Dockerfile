@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy the cloud.py file into the container
 COPY cloud.py /app/cloud.py
-
+#This are prerequisite
 # Install required Python dependencies
 RUN pip install json5
 
@@ -19,10 +19,11 @@ VOLUME factors-db:/app/factors-db
 # Set environment variables
 ENV HOST=0.0.0.0
 ENV PORT=5071
-
+#Although I have exposed the below 2 but only is used I have kept to avoid confusion
 # Expose the port on which the cloud server will listen
 EXPOSE 5071
 EXPOSE 5000
 
+#using python3 command instead of python
 # Command to start the cloud server when the container is launched
 CMD ["python3", "cloud.py"]
