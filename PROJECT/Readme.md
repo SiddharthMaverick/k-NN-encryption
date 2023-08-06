@@ -60,6 +60,7 @@ Sequence should be 3->1->2->4
    - Now execute the query_user.py in separate terminal
    - Data Owner is listening for query_user to receive Encrypted query and Public key
    - Then after Receiving a Homomorphic database Aq it is sent to server.
+   - Then Encrypted Database
 
 3. **Cloud Server Setup:**
 
@@ -75,7 +76,9 @@ Sequence should be 3->1->2->4
      ```
      docker run -it -p 9000:9000 -p 17034:17034 server
      ```
-   - Proceed to execute 
+   - Proceed to execute data_owner.py
+   - After getting both Encrypted Database and Encrypted query we set the value of k and give       a list back to user.
+   - Note the k -value is not given by the user since it can harm the overall security of           database.
 
 4. **Query User Setup:**
 
@@ -89,6 +92,10 @@ Sequence should be 3->1->2->4
      ```
    - A random query is generated for ease of 50 dimension
      one can also use his query by initializing variable q in query_user.py
+   - Query User  gets encrypted query and public key
+   - Receives Aq(homomorphic encrypted query)
+   - Then decrypted into a simpler query and sent to server to send list of k-nn
+   - Proceed to cloud-server
 
 ## Dockerfile Execution Command
 
