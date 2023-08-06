@@ -8,7 +8,7 @@ ENV PYTHONUNBUFFERED=1
 # Set the working directory inside the container
 WORKDIR /app
 # Copy all Python scripts and other required files to the container
-COPY QU.py cloud_server.py data_gen.py data_owner.py query_user.py database.txt DO.py /app/
+COPY cloud_server.py data_gen.py data_owner.py query_user.py database.txt /app/
 
 
 
