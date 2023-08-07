@@ -102,6 +102,6 @@ Sequence should be 3->1->2->4
 To build and run the cloud server container, use the following command:
 
 ```bash
-docker build -t cloud-server 
+docker build -t server .
 docker run -it -p 9000:9000 -p 17034:17034 server
 
